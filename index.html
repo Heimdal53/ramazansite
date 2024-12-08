@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--=============== Font Awesome ===============-->
+    <script src="https://kit.fontawesome.com/953eae4970.js" crossorigin="anonymous"></script>
+</head>
+<body>    
+    <!--==================== ÜST BÖLÜM ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="./assets/img/favicon.png" class="imgr" alt="">
+                <p>MAĞAZA</p>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list menu">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link active-link">Anasayfa</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Ürünler</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x-circle'></i>
+                </div>
+            </div>
+            <div class="nav__btns">
+                <i class='bx bxs-moon' id="night-button"></i>
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bxs-shopping-bags'></i>
+                    <span id="cart-count" class="count">0</span>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu-alt-right'></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--==================== SEPET ====================-->
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart-close"></i>
+        <h2 class="cart__title-center">Sepetim</h2>
+        <div class="cart__container">
+            <div class="cart__empty">
+                <img src="./assets/img/empty-cart.png" alt="Boş Sepet">
+                <h2>Sepetiniz Boş</h2>
+                <p>Ürün sayfasında "<i class="bx bx-plus"></i>" düğmesine tıklayarak sepetinize ürün ekleyebilirsiniz.</p>
+            </div>
+        </div>
+        <div class="cart__prices">
+            <span class="cart__prices-item"><span id="items-count">0</span> ürün</span>
+            <span class="cart__prices-total" id="cart-total">₺0.00</span>
+        </div>
+        <div class="cart__checkout">
+            <button class="button cart__btn" id="cart-checkout">
+                <i class="bx bxs-check-shield"></i> 
+                Ödeme Yap
+            </button>
+        </div>
+    </div>
+    <!--==================== ANA BÖLÜM ====================-->
+    <main class="main">
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <img src="./assets/img/home.png" alt="" class="home__img pr__img">
+                </div>
+                <div class="home__data">
+                    <h1 class="home__title">Yeni Sweatshirt <br> KOLEKSİYONU 2024</h1>
+                    <p class="home__description change">
+                        Modern bir tasarıma sahip 2024 serisinden yeni ürünlerimiz.
+                    </p>
+                    <span class="home__price">₺700.00</span>
+                    <div class="home__btns">
+                        <a class="button button--gray button--small">
+                            Keşfet
+                        </a>
+                        <a href="#shirt"><button class="button home__button shop__button">SEPETE EKLE</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================== ÜRÜNLER ====================-->
+        <section class="products" id="products">
+            <div class="products__container container">
+                <ul class="products__filters">
+                    <li class="products__item products__line active-product mixitup-control-active" data-filter="all">
+                        <h3 class="products__title" data-filter="all">Hepsini Göster</h3>
+                        <span class="products__stock" data-filter="all">Tüm ürünleri göster</span>
+                    </li>
+                    <li class="products__item products__line" data-filter=".hoodies">
+                        <h3 class="products__title" data-filter=".hoodies">Kapüşonlular</h3>
+                        <span class="products__stock" id="hoodies" data-filter=".hoodies">10 ürün</span>
+                    </li>
+                    <li class="products__item products__line" data-filter=".shirts">
+                        <h3 class="products__title" data-filter=".shirts">Gömlekler</h3>
+                        <span class="products__stock" id="shirt" data-filter=".shirts">15 ürün</span>
+                    </li>
+                    <li class="products__item" data-filter=".sweatshirts">
+                        <h3 class="products__title" id="sweatshirts" data-filter=".sweatshirts">Sweatshirtler</h3>
+                        <span class="products__stock" data-filter=".sweatshirts">20 ürün</span>
+                    </li>
+                </ul>
+                <div class="products__content grid" id="products__content">
+                    <article class="products__card hoodies">
+                        <div class="products__shape">
+                            <img src="./assets/img/featured1.png" alt="Kapüşonlular" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <h2 class="products__price">
+                                <span class="currency">₺</span>750.00 
+                                <span class="products__quantity">| Stok: 10</span>
+                            </h2>
+                            <h3 class="products__name">Kapüşonlular</h3>
+                            <button class="button products__button">
+                                <i class="bx bx-plus" data-id="1"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="products__card shirts">
+                        <div class="products__shape">
+                            <img src="./assets/img/featured2.png" alt="Gömlekler" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <h2 class="products__price">
+                                <span class="currency">₺</span>700.00 
+                                <span class="products__quantity">| Stok: 15</span>
+                            </h2>
+                            <h3 class="products__name">Gömlekler</h3>
+                            <button class="button products__button">
+                                <i class="bx bx-plus" data-id="2"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="products__card sweatshirts">
+                        <div class="products__shape">
+                            <img src="./assets/img/featured3.png" alt="Sweatshirtler" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <h2 class="products__price">
+                                <span class="currency">₺</span>750.00 
+                                <span class="products__quantity">| Stok: 20</span>
+                            </h2>
+                            <h3 class="products__name">Sweatshirtler</h3>
+                            <button class="button products__button">
+                                <i class="bx bx-plus" data-id="3"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <!--==================== ALT BÖLÜM ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Bilgilerimiz</h3>
+                <ul class="footer__list menu">
+                    <li>
+                        <p><a href="https://www.google.com/maps/" target="_blank"> <i class='bx bx-current-location'> Trabzon - Türkiye</i></a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Hakkımızda</h3>
+                <ul class="footer__links menu">
+                    <li><a href="#" target="_blank" class="footer__link">Destek Merkezi</a></li>
+                    <li><a href="#" target="_blank" class="footer__link">Müşteri Hizmetleri</a></li>
+                    <li><a href="#" target="_blank" class="footer__link">Hakkımızda</a></li>
+                    <li><a href="#" target="_blank" class="footer__link">Telif Hakkı</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Ürünler</h3>
+                <ul class="footer__links menu">
+                    <li><a href="#hoodies" class="footer__link">Kapüşonlular</a></li>
+                    <li><a href="#shirt" class="footer__link">Gömlekler</a></li>
+                    <li><a href="#sweatshirts" class="footer__link">Sweatshirtler</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Sosyal</h3>
+                <ul class="footer__social menu">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <span class="reg"><i class='bx bx-registered'></i><a href="#" target="_blank"> BONPABLO</a></span>
+    </footer>
+    <!--=============== YUKARI ÇIK ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+    <script src="./assets/main/main.js"></script>
+</body>
+</html>
